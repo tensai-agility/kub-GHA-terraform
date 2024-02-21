@@ -1,4 +1,3 @@
-output "message" { value = "Hello, World!" }
 variable "admin_password" {}
 echo "##active_line2##"
 variable "vm_name" {}
