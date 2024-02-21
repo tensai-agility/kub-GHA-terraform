@@ -15,6 +15,5 @@ jobs:
       uses: hashicorp/setup-terraform@v1
     - name: 'Terraform Init'
       run: terraform init
-      run: terraform plan -out=tfplan
     - name: Terraform Apply
       run: terraform apply -auto-approve -var 'vm_name=GHA-teeraform-VM' -var 'location=Us East' -var 'vm_size=Standard_DS1_v2' -var 'image=Ubuntu Server 22.04LTS-X64Gen2' -var 'admin_username=terra' -var 'admin_password=terraf0rmVMconfiguRation'
