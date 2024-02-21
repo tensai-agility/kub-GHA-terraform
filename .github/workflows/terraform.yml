@@ -1,42 +1,22 @@
-echo "##active_line2##"
 name: 'Terraform'
-echo "##active_line3##"
 on:
-echo "##active_line4##"
   push:
-echo "##active_line5##"
     branches:
-echo "##active_line6##"
     - '*'
-echo "##active_line7##"
 jobs:
-echo "##active_line8##"
   terraform:
-echo "##active_line9##"
     name: 'Terraform'
-echo "##active_line10##"
     runs-on: ubuntu-latest
-echo "##active_line11##"
     environment: 'production'
-echo "##active_line12##"
     steps:
-echo "##active_line13##"
     - name: 'Checkout'
-echo "##active_line14##"
       uses: actions/checkout@v2
-echo "##active_line15##"
     - name: 'Setup Terraform'
-echo "##active_line16##"
       uses: hashicorp/setup-terraform@v1
-echo "##active_line17##"
     - name: 'Terraform Init'
-echo "##active_line18##"
       run: terraform init
-echo "##active_line19##"
     - name: Terraform Plan
     - name: Terraform Apply
       run: terraform apply -auto-approve tfplan
       run: terraform plan -out=tfplan
-echo "##active_line20##"
       run: terraform apply -auto-approve -var 'vm_name=GHA-teeraform-VM' -var 'location=Us East' -var 'vm_size=Standard_DS1_v2' -var 'image=Ubuntu Server 22.04LTS-X64Gen2' -var 'admin_username=terra' -var 'admin_password=terraf0rmVMconfiguRation'
-echo "##active_line21##"
