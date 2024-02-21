@@ -35,6 +35,6 @@ echo "##active_line18##"
 echo "##active_line19##"
     - name: 'Terraform Plan'
 echo "##active_line20##"
-      run: terraform plan -var 'vm_name=GHA-teeraform-VM' -var 'location=Us East' -var 'vm_size=Standard_DS1_v2' -var 'image=Ubuntu Server 22.04LTS-X64Gen2' -var 'admin_username=terra' -var 'admin_password=terraf0rmVMconfiguRation'
+      run: terraform apply -auto-approve -var 'vm_name=GHA-teeraform-VM' -var 'location=Us East' -var 'vm_size=Standard_DS1_v2' -var 'image=Ubuntu Server 22.04LTS-X64Gen2' -var 'admin_username=terra' -var 'admin_password=terraf0rmVMconfiguRation'
 echo "##active_line21##"
 # This is a test comment to trigger the workflow
