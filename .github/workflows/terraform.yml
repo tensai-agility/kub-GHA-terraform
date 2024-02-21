@@ -17,9 +17,7 @@ jobs:
       run: terraform init
     - name: Terraform Plan
       run: terraform plan -out=tfplan
-    - name: Terraform Apply
-      run: terraform apply -auto-approve tfplan
-      run: terraform apply -auto-approve tfplan
       run: terraform apply -auto-approve tfplan
       run: terraform plan -out=tfplan
       run: terraform apply -auto-approve -var 'vm_name=GHA-teeraform-VM' -var 'location=Us East' -var 'vm_size=Standard_DS1_v2' -var 'image=Ubuntu Server 22.04LTS-X64Gen2' -var 'admin_username=terra' -var 'admin_password=terraf0rmVMconfiguRation'
+    - name: Terraform Apply\n      run: terraform apply -auto-approve tfplan
