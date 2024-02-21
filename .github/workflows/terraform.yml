@@ -33,7 +33,10 @@ echo "##active_line17##"
 echo "##active_line18##"
       run: terraform init
 echo "##active_line19##"
-    - name: 'Terraform Plan'
+    - name: Terraform Plan
+    - name: Terraform Apply
+      run: terraform apply -auto-approve tfplan
+      run: terraform plan -out=tfplan
 echo "##active_line20##"
       run: terraform apply -auto-approve -var 'vm_name=GHA-teeraform-VM' -var 'location=Us East' -var 'vm_size=Standard_DS1_v2' -var 'image=Ubuntu Server 22.04LTS-X64Gen2' -var 'admin_username=terra' -var 'admin_password=terraf0rmVMconfiguRation'
 echo "##active_line21##"
